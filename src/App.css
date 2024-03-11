@@ -1,0 +1,237 @@
+:root {
+  --gray-color-1: #3c3c3d;
+  --gray-color-2: #383839;
+  --gray-color-3: #2e2b2c;
+  --gray-button-color: #e5e5e5;
+  --light-white: #c5c5c5;
+  --light-orange: rgb(255, 215, 191, .3);
+  --orange-color: rgb(238, 116, 5);
+}
+
+.drum-machine {
+  padding: 20px;
+  width:100%;
+  height:100%;
+}
+
+.main-body {
+  width: 100%;
+  height: 100%;
+  background-color: var(--gray-color-2);
+  border-radius: 10px;
+  padding: 2% 3% 0 3%;
+}
+
+.inner-dark {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: var(--gray-color-3);
+  border-radius: 5px 5px 0 0;
+  padding: 1% 1% 0 1%;
+}
+
+.orange-container {
+  width: 100%;
+  height: 80%;
+  border: 2px solid var(--orange-color);
+  border-radius: 5px;
+  padding: 1%;
+}
+
+.table-orange {
+  width: 100%;
+  height: 100%;
+  border-collapse: collapse;
+}
+
+.table-orange td {
+  height: auto;
+  position: relative;
+  border: 2px solid var(--orange-color);
+  padding: 1%;
+}
+
+.table-orange tr:first-child td {
+  border-top: 0;
+}
+
+.table-orange tr td:first-child {
+  border-left: 0;
+}
+
+.table-orange tr:last-child td {
+  border-bottom: 0;
+}
+
+.table-orange tr td:last-child {
+  border-right: 0;
+}
+
+.drum-button {
+  width: 100%;
+  height: 100%;
+  background-color: var(--gray-color-1);
+  border-top: 3px solid rgba(255,255,255, .05);
+  border-right: none;
+  border-bottom: none;
+  border-left: 3px solid rgba(255,255,255, .05);
+  box-shadow: 2px 2px 5px rgba(0,0,0, .1);
+  outline: none;
+}
+
+.drum-button-letter {
+  font-family: "Rubik Mono One", monospace;
+  font-size: 3rem;
+  color: var(--gray-color-3)
+}
+
+
+.drum-button-light {
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  width: 25px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: var(--light-orange);
+  box-shadow: inset 0px 0px 5px 1px rgba(0, 0, 0, 1);
+}
+
+.active-light {
+  background: radial-gradient(circle, rgb(231, 161, 96), var(--orange-color));
+}
+
+.console {
+  display: grid;
+  grid-template-columns: 15% 35% 35%;
+  gap: 5%;
+  align-items: center;
+  position: relative;
+  width: 90%;
+  height: 15%;
+  background: linear-gradient(-45deg, rgb(30,30,30), rgb(35,35,35), rgb(30,30,30), rgb(35,35,35));
+  margin: 0 auto;
+  bottom: -5%;
+  clip-path: polygon(5% 0%, 95% 0%, 100% 100%, 0% 100%);
+  box-shadow: inset 0 1px 10px 0px rgba(0,0,0,.5);
+}
+
+.left {
+  text-align: center;
+  padding-left: 45%;
+
+}
+
+.power-button {
+  display: inline-block;
+  text-align: center;
+  margin: 0 auto;
+  border-radius: 50%;
+  background-color: var(--gray-button-color);
+  box-shadow: 3px 3px 2px black;
+  outline: 2px solid rgba(0,0,0,.5);
+}
+
+.power-button > i {
+  font-size: 1em;
+  margin: 10px;
+}
+
+.power-button:active {
+  box-shadow: inset 1px 1px 1px rgba(0,0,0,.7);
+  margin-top: 5px;
+}
+
+.middle {
+  height: 70%;
+}
+
+.screen-frame {
+  padding: 2px;
+  height: 100%;
+  width: 90%;
+  background: linear-gradient(90deg,var(--gray-color-2), var(--gray-color-3), var(--gray-color-2));
+  box-shadow: 0 0 3px black;
+  border-radius: 10px;
+  margin: 0 auto;
+}
+
+.screen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background: var(--gray-color-1);
+  border: 3px solid var(--gray-color-3);
+  border-radius: 7px;
+}
+
+.screen-on {
+  background: var(--orange-color);
+}
+
+.screen-text {
+  font-family: 'Teko', sans-serif;
+  font-size: 1.1em;
+  line-height: .9em;
+  text-align: center;
+  color: rgb(30, 30, 30);
+}
+
+.right {
+  padding-right: 15%;
+}
+
+.volume-control {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.console > .right  i {
+  display: block;
+  color: var(--light-white);
+}
+
+.volume-slider-container {
+  width: 100%;
+}
+
+.volume-slider-container > input {
+  outline: none;
+}
+
+.volume-slider {
+  appearance: none;
+  width: 100%;
+  height: 5px;
+  background: black;
+  border-bottom: 1px solid var(--gray-color-1)
+}
+
+.volume-slider::-webkit-slider-thumb {
+  position: relative;
+  appearance: none;
+  width: 10px;
+  height: 25px;
+  background: linear-gradient(135deg, var(--gray-color-1), var(--gray-color-3));
+  border-radius: 3px;
+  border-top: 1px solid rgba(255,255,255,.3);
+  border-left: 1px solid rgba(255,255,255,.3);
+  box-shadow: 2px 2px 5px black;
+}
+
+@media only screen and (min-width: 768px) {
+  .drum-machine {
+      padding: 20px;
+      width: 768px;
+      max-height: 900px;
+  }
+
+  .power-button > i {
+      margin: 15px;
+      font-size: 1.2em;
+  }
+}
