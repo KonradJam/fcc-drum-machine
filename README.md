@@ -1,8 +1,15 @@
-# React + Vite
+# Drum Machine
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This application was made to pass the task on FreeCodeCamp. 
+It's simulating a real drum machine.  
+The application can be operated with a mouse, but also with a keyboard.
 
-Currently, two official plugins are available:
+Shortcuts:
+```
+Escape - power on/off
++/-  - volume up/down 1%
+Shift + +/- - volume up/down 5% 
+q,w,e,a,s,d,z,x,c - sounds
+```
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
